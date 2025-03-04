@@ -19,8 +19,8 @@
 
 import SparkConnect
 
-let spark = try await SparkConnect.SparkSession.builder.getOrCreate()
-print("Connected to Apache Spark \(try await spark.version) Server")
+let spark = try await SparkSession.builder.getOrCreate()
+print("Connected to Apache Spark \(await spark.version) Server")
 
 let statements = [
   "DROP TABLE IF EXISTS t",
