@@ -27,7 +27,7 @@ let package = Package(
       .macOS(.v15)
     ],
     dependencies: [
-      .package(url: "https://github.com/dongjoon-hyun/spark-connect-swift.git", from: "0.2.0")
+      .package(url: "https://github.com/dongjoon-hyun/spark-connect-swift.git", branch: "main")
     ],
     targets: [
         .executableTarget(
