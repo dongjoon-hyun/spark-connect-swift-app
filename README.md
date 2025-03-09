@@ -18,11 +18,16 @@ Run this Swift application.
 ```
 $ swift run
 ...
-Build of product 'SparkConnectSwiftApp' complete! (31.40s)
 Connected to Apache Spark 4.0.0 Server
 EXECUTE: DROP TABLE IF EXISTS t
 EXECUTE: CREATE TABLE IF NOT EXISTS t(a INT)
 EXECUTE: INSERT INTO t VALUES (1), (2), (3)
 SELECT * FROM t
-3
++---+
+| a |
++---+
+| 2 |
+| 1 |
+| 3 |
++---+
 ```
