@@ -22,17 +22,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "SparkConnectSwiftApp",
-    platforms: [
-      .macOS(.v15)
-    ],
-    dependencies: [
-      .package(url: "https://github.com/dongjoon-hyun/spark-connect-swift.git", branch: "main")
-    ],
-    targets: [
-        .executableTarget(
-            name: "SparkConnectSwiftApp",
-            dependencies: [ .product(name: "SparkConnect", package: "spark-connect-swift") ]
-        )
-    ]
+  name: "SparkConnectSwiftApp",
+  platforms: [
+    .macOS(.v15)
+  ],
+  dependencies: [
+    .package(url: "https://github.com/dongjoon-hyun/spark-connect-swift.git", branch: "main")
+  ],
+  targets: [
+    .executableTarget(
+      name: "SparkConnectSwiftApp",
+      dependencies: [.product(name: "SparkConnect", package: "spark-connect-swift")]
+    )
+  ]
 )
