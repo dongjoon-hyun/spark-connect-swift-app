@@ -1,6 +1,6 @@
 # A Swift Application with Apache Spark Connect Swift Client
 
-This is an example Swift application to show how to use [Apache Spark Connect Swift Client Library](https://github.com/dongjoon-hyun/spark-connect-swift).
+This is an example Swift application to show how to use [Apache Spark Connect Swift Client Library](https://github.com/apache/spark-connect-swift.git).
 
 ## How to run
 
