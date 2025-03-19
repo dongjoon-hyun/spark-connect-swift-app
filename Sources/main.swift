@@ -33,6 +33,6 @@ for s in statements {
   _ = try await spark.sql(s).count()
 }
 print("SELECT * FROM t")
-try await spark.sql("SELECT * FROM t").show()
+try await spark.sql("SELECT * FROM t").cache().show()
 
 await spark.stop()
