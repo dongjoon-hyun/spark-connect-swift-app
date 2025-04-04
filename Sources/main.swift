@@ -24,7 +24,7 @@ print("Connected to Apache Spark \(await spark.version) Server")
 
 let statements = [
   "DROP TABLE IF EXISTS t",
-  "CREATE TABLE IF NOT EXISTS t(a INT)",
+  "CREATE TABLE IF NOT EXISTS t(a INT) USING ORC",
   "INSERT INTO t VALUES (1), (2), (3)",
 ]
 
@@ -34,5 +34,8 @@ for s in statements {
 }
 print("SELECT * FROM t")
 try await spark.sql("SELECT * FROM t").cache().show()
+
+try await spark.range(10).filter("id % 2 == 0").write.mode("overwrite").orc("/tmp/orc")
+try await spark.read.orc("/tmp/orc").show()
 
 await spark.stop()
