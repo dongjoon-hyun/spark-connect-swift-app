@@ -4,10 +4,10 @@ This is an example Swift application to show how to use [Apache Spark Connect Sw
 
 ## How to run
 
-Prepare Apache Spark 4.0.0 (RC3) Connect Server.
+Prepare Apache Spark 4.0.0 (RC4) Connect Server.
 
 ```
-$ curl -LO https://dist.apache.org/repos/dist/dev/spark/v4.0.0-rc3-bin/spark-4.0.0-bin-hadoop3.tgz
+$ curl -LO https://dist.apache.org/repos/dist/dev/spark/v4.0.0-rc4-bin/spark-4.0.0-bin-hadoop3.tgz
 $ tar xvfz spark-4.0.0-bin-hadoop3.tgz
 $ cd spark-4.0.0-bin-hadoop3
 $ sbin/start-connect-server.sh
